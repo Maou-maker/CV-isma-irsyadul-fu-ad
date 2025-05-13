@@ -6,11 +6,37 @@ body {
   text-align: center;
 }
 
+/* Sudut kanan atas */
+.top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.icon-top {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.my-cv-text {
+  color: cyan;
+  font-weight: 600;
+  text-shadow: 0 0 8px cyan;
+}
+
 .hero {
   background-image: url('images/bg-cv.jpg');
   background-size: cover;
   background-position: center;
   padding: 100px 20px;
+  position: relative;
 }
 
 .banner {
@@ -21,6 +47,7 @@ body {
   border-left: 10px solid orange;
   font-weight: 600;
   margin-bottom: 20px;
+  font-size: 1.5em;
 }
 
 .subtitle {
@@ -49,23 +76,4 @@ body {
 .cv-buttons a:hover {
   background: #fff;
   color: orange;
-}
-.logo {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  vertical-align: middle;
-  margin-right: 10px;
-}
-.branding {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.logo {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
 }
