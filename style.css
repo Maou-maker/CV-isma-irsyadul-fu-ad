@@ -35,8 +35,14 @@ body {
   background-image: url('images/bg-cv.jpg');
   background-size: cover;
   background-position: center;
-  padding: 100px 20px;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full tinggi layar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  padding: 20px;
 }
 
 .banner {
