@@ -1,0 +1,96 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Video Background */
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* Konten di atas video */
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+/* Judul utama */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+/* Kotak portofolio */
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.portfolio-box {
+  background-color: #6efc89; /* hijau terang */
+  color: black;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-box:hover {
+  transform: scale(1.05);
+  background-color: #5ae277;
+}
+
+/* Tombol kembali */
+.btn-back {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+  background-color: #e5e5e5;
+}
+
+/* Responsive breakpoint */
+@media screen and (max-width: 600px) {
+  .portfolio-box {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
