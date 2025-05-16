@@ -13,20 +13,20 @@ body {
   transition: background-image 0.5s ease-in-out;
 
   /* Default: Laptop */
-  background-image: url('laptop background.png');
+  background-image: url('images/laptop background.png');
 }
 
 /* Tablet */
 @media (max-width: 1024px) and (min-width: 481px) {
   body {
-    background-image: url('ipad background.png');
+    background-image: url('images/ipad background.png');
   }
 }
 
 /* HP */
 @media (max-width: 480px) {
   body {
-    background-image: url('HP background.png');
+    background-image: url('images/HP background.png');
   }
 }
 
