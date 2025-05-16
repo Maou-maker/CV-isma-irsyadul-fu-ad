@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive CV Background</title>
+  <style>
+    /* Reset & Default */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-image 0.5s ease-in-out;
+    }
+
+    /* Default Laptop */
+    body {
+      background-image: url('laptop background.png');
+    }
+
+    /* Tablet */
+    @media (max-width: 1024px) and (min-width: 481px) {
+      body {
+        background-image: url('ipad background.png');
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      body {
+        background-image: url('HP background.png');
+      }
+    }
+  </style>
+</head>
+<body>
+</body>
+</html>
