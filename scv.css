@@ -1,0 +1,52 @@
+/* Latar belakang responsif berdasarkan ukuran layar */
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  transition: background-image 0.5s ease-in-out;
+
+  /* Default: Laptop */
+  background-image: url('laptop background.png');
+}
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 481px) {
+  body {
+    background-image: url('ipad background.png');
+  }
+}
+
+/* HP */
+@media (max-width: 480px) {
+  body {
+    background-image: url('HP background.png');
+  }
+}
+
+/* Tombol Navigasi */
+.button-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.button-container a {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.button-container a:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+}
