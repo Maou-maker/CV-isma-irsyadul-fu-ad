@@ -19,7 +19,6 @@ body.portfolio-page {
   position: relative;
 }
 
-/* Background responsif */
 @media (min-width: 1025px) {
   body.portfolio-page {
     background-image: url('images/Portofolio-bg pc.png');
