@@ -5,92 +5,99 @@
   box-sizing: border-box;
 }
 
-body, html {
-  height: 100%;
-  width: 100%;
-  font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
-  position: relative;
-}
-
-/* Video Background */
-#bg-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-  object-fit: cover;
-}
-
-/* Konten di atas video */
-.content {
-  position: relative;
-  z-index: 2;
-  padding: 2rem;
+body.portfolio-page {
+  font-family: 'Segoe UI', sans-serif;
   color: white;
-  text-align: center;
-}
-
-/* Judul utama */
-h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  color: white;
-}
-
-/* Kotak portofolio */
-.portfolio-container {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
 }
 
-.portfolio-box {
-  background-color: #6efc89; /* hijau terang */
-  color: black;
-  padding: 1.5rem 2rem;
+/* Background responsif */
+@media (min-width: 1025px) {
+  body.portfolio-page {
+    background-image: url('images/Portofolio-bg pc.png');
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  body.portfolio-page {
+    background-image: url('images/Portofolio-ipad landscape.png');
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  body.portfolio-page {
+    background-image: url('images/Portofolio-ipad potrait.png');
+  }
+}
+
+@media (max-width: 767px) {
+  body.portfolio-page {
+    background-image: url('images/Portofolio-hp.png');
+  }
+}
+
+/* Overlay hitam semi transparan */
+.portfolio-overlay {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 12px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.portfolio-box:hover {
+/* Judul */
+.portfolio-overlay h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Grid box portofolio */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio-item {
+  display: block;
+  background-color: #64f08e;
+  color: black;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.portfolio-item:hover {
   transform: scale(1.05);
-  background-color: #5ae277;
+  background-color: #4fd77d;
 }
 
 /* Tombol kembali */
 .btn-back {
   display: inline-block;
-  padding: 0.8rem 1.5rem;
+  padding: 0.75rem 2rem;
   background-color: white;
   color: black;
-  text-decoration: none;
   font-weight: bold;
   border-radius: 10px;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
 }
 
 .btn-back:hover {
-  background-color: #e5e5e5;
-}
-
-/* Responsive breakpoint */
-@media screen and (max-width: 600px) {
-  .portfolio-box {
-    width: 100%;
-    font-size: 0.9rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
+  background-color: #f0f0f0;
 }
