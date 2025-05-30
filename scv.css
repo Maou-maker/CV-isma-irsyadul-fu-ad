@@ -91,9 +91,11 @@ h1 {
 
 .slide img {
   width: 100%;
+  max-width: 600px;  /* Maksimum lebar gambar */
   height: auto;
   border: 3px solid white;
   border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 .caption {
@@ -123,4 +125,28 @@ h1 {
 .dot.active,
 .dot:hover {
   background-color: white;
+}
+@media (max-width: 480px) {
+  .slide img {
+    max-width: 90%;
+  }
+}
+/* Untuk iPad Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) {
+  .slide img {
+    max-width: 80%;
+  }
+}
+
+/* Untuk iPad Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) {
+  .slide img {
+    max-width: 90%;
+  }
 }
